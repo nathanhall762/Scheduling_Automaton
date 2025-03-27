@@ -1,0 +1,14 @@
+name: Weekly Discord Message
+on:
+  schedule:
+    - cron: '0 12 * * 0' # Every Monday at noon UTC
+jobs:
+  send-message:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+      - name: Install dependencies
+        run: npm install # or pip install for Python bots
+      - name: Run bot
+        run: node . # or python bot.py
