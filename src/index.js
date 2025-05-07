@@ -25,17 +25,6 @@ for (const folder of commandFolders) {
 	}
 }
 
-client.on(Events.InteractionCreate, async interaction => {
-	if (!interaction.isChatInputCommand()) return;
-
-	const { commandName } = interaction;
-
-	if (commandName === 'react') {
-		const response = await interaction.reply({ content: 'You can react with Unicode emojis!', withResponse: true });
-		response.resource.message.react('😄');
-	}
-});
-
 const eventsPath = path.join(__dirname, 'events');
 const eventFiles = fs.readdirSync(eventsPath).filter(file => file.endsWith('.js'));
 

@@ -5,6 +5,9 @@
   "author": "",
   "license": "ISC",
   "description": "",
+  "scripts": {
+    "start": "node src/index.js"
+  },
   "dependencies": {
     "discord.js": "^14.18.0"
   }
